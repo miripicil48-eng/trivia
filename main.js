@@ -248,7 +248,7 @@ const game = new Phaser.Game(config);
 
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
-    navigator.serviceWorker.register("service-worker.js")
+    navigator.serviceWorker.register("sw.js")
       .then((registration) => {
         console.log("Service Worker registrado:", registration.scope);
       })
@@ -256,4 +256,5 @@ if ("serviceWorker" in navigator) {
         console.log("Error al registrar Service Worker:", error);
       });
   });
+
 }
